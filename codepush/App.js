@@ -26,6 +26,8 @@ import {
 
 import codePush from 'react-native-code-push';
 
+let codePushOptions = {checkFrequency: codePush.CheckFrequency.ON_APP_RESUME};
+
 let App: () => React$Node = () => {
   return (
     <>
@@ -114,6 +116,6 @@ const styles = StyleSheet.create({
   },
 });
 
-App = codePush(App);
+App = codePush(codePushOptions)(App);
 
 export default App;
