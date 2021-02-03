@@ -14,6 +14,7 @@ import {
   View,
   Text,
   StatusBar,
+  Image,
 } from 'react-native';
 
 import {
@@ -29,6 +30,7 @@ import codePush from 'react-native-code-push';
 let codePushOptions = {checkFrequency: codePush.CheckFrequency.ON_APP_RESUME};
 
 let App: () => React$Node = () => {
+  codePush.sync();
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -37,6 +39,38 @@ let App: () => React$Node = () => {
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
           <Text>Test</Text>
+          <View style={styles.container}>
+            <Image
+              style={styles.tinyLogo}
+              source={{
+                uri: 'https://i.mydramalist.com/wKZDJf.jpg',
+              }}
+            />
+          </View>
+          <View style={styles.container}>
+            <Image
+              style={styles.tinyLogo}
+              source={{
+                uri:
+                  'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/180519_%EC%86%94%EB%9D%BC_02_%28cropped%29.jpg/1200px-180519_%EC%86%94%EB%9D%BC_02_%28cropped%29.jpg',
+              }}
+            />
+          </View>
+          {/* <View style={{width: '85%', alignItems: 'center'}}>
+            <Image
+              style={{
+                width: 500,
+                height: 500,
+                resizeMode: 'contain',
+                alignSelf: 'center',
+              }}
+              source={require({
+                uri:
+                  '',
+              })}
+            />
+          </View> */}
+          <Text>Test2</Text>
           {/* <Header />
           {global.HermesInternal == null ? null : (
             <View style={styles.engine}>
@@ -78,6 +112,17 @@ let App: () => React$Node = () => {
 };
 
 const styles = StyleSheet.create({
+  container: {
+    paddingTop: 50,
+  },
+  tinyLogo: {
+    width: 350,
+    height: 350,
+  },
+  logo: {
+    width: 66,
+    height: 58,
+  },
   scrollView: {
     backgroundColor: Colors.lighter,
   },
