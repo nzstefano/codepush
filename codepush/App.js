@@ -39,7 +39,7 @@ let App: () => React$Node = () => {
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
           <Text>Test</Text>
-          <View style={styles.container}>
+          {/* <View style={styles.container}>
             <Image
               style={styles.tinyLogo}
               source={{
@@ -55,7 +55,7 @@ let App: () => React$Node = () => {
                   'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/180519_%EC%86%94%EB%9D%BC_02_%28cropped%29.jpg/1200px-180519_%EC%86%94%EB%9D%BC_02_%28cropped%29.jpg',
               }}
             />
-          </View>
+          </View> */}
           {/* <View style={{width: '85%', alignItems: 'center'}}>
             <Image
               style={{
@@ -69,7 +69,7 @@ let App: () => React$Node = () => {
                   '',
               })}
             />
-          </View> */}
+          </View>
           <Text>Test2</Text>
           {/* <Header />
           {global.HermesInternal == null ? null : (
